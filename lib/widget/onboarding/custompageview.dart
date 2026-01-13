@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/select_location.dart';
-import 'package:flutter_application_1/constant/colors.dart';
-import 'package:flutter_application_1/constant/imageasset.dart';
+import 'package:taxi_app/Screen/select_location.dart';
+import 'package:taxi_app/constant/colors.dart';
+import 'package:taxi_app/constant/imageasset.dart';
 
 class custompageview extends StatefulWidget {
   custompageview({super.key});
@@ -13,7 +13,7 @@ class custompageview extends StatefulWidget {
 
 class _custompageviewcontrollerState extends State<custompageview> {
   int currentPage = 0;
-  late PageController pageController;
+
   List<Map<String, dynamic>> boarding = [
     {
       'title': 'Request Ride',
@@ -36,17 +36,6 @@ class _custompageviewcontrollerState extends State<custompageview> {
     },
   ];
 
-  onPageChanged(int index) {
-    setState(() {
-      currentPage = index;
-    });
-  }
-
-  void initState() {
-    pageController = PageController();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -63,7 +52,8 @@ class _custompageviewcontrollerState extends State<custompageview> {
               physics: const BouncingScrollPhysics(),
               itemCount: boarding.length,
               onPageChanged: (val) {
-                onPageChanged(val);
+                currentPage = val;
+                setState(() {});
               },
 
               itemBuilder: (context, i) => Column(

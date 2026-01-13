@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant/colors.dart';
-import 'package:flutter_application_1/widget/onboarding/custompageview.dart';
+import 'package:taxi_app/constant/colors.dart';
+import 'package:taxi_app/widget/onboarding/custompageview.dart';
+
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -16,8 +17,8 @@ class _OnboardingState extends State<Onboarding> {
     return Scaffold(
       backgroundColor: AppColor.backgroundColor,
       body: SafeArea(
-        child: Column(children: [Expanded(flex: 2, child: custompageview())]),
-      ),
+        child:  custompageview())
+      
     );
   }
 }
