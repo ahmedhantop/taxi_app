@@ -43,3 +43,17 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# FVM Version Cache
+.fvm/
+# Flutter generated platform files
+linux/flutter/
+macos/Flutter/
+windows/flutter/
+
+# VS Code settings
+.vscode/
+
+# FVM
+.fvm/
+.fvmrc
